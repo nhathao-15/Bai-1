@@ -1,0 +1,108 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const ProfileScreen(),
+    );
+  }
+}
+
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Thanh top bar
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // BACK BUTTON
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade200,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(Icons.arrow_back),
+                  ),
+
+                  // EDIT BUTTON
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade200,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(Icons.edit),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 40),
+
+            // AVATAR
+            CircleAvatar(
+              radius: 60,
+              backgroundImage: NetworkImage(
+                "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+              ),
+            ),
+
+
+
+            const SizedBox(height: 20),
+
+            // TÊN
+            const Text(
+              "Johan Smith",
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            // ĐỊA CHỈ
+            const Text(
+              "California, USA",
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+1.	Mong muốn và định hướng của bạn là gì sau khi học xong môn học?
+Sau khi hoàn thành môn Lập trình thiết kế di động, định hướng của mình là:
+•	Nắm vững nền tảng phát triển ứng dụng di động trên Android/iOS, bao gồm kiến trúc ứng dụng, quản lý vòng đời màn hình, xử lý dữ liệu và UI/UX cơ bản.
+•	Xây dựng được các ứng dụng di động hoàn chỉnh, có khả năng tương tác với API, sử dụng cơ sở dữ liệu cục bộ và triển khai lên kho ứng dụng hoặc GitHub.
+2.	Theo bạn, trong tương lai gần (10 năm) lập trình di động có phát triển không? Giải thích tại sao?
+Trong 10 năm tới lập trình di động chắc chắn vẫn phát triển mạnh, vì các lý do:
+-	Thiết bị di động ngày càng phổ biến:
+Điện thoại thông minh là thiết bị chính của phần lớn người dùng. Hầu hết các dịch vụ — ngân hàng, giáo dục, y tế, mua sắm — đều dịch chuyển lên mobile.
+-	Nhu cầu về ứng dụng di động không ngừng tăng
+Doanh nghiệp cần ứng dụng để tiếp cận khách hàng, theo dõi dữ liệu, bán hàng, hỗ trợ người dùng…
+-	Mobile vẫn là thị trường lớn nhất trong ngành phần mềm
+Doanh thu ứng dụng di động trên App Store/Play Store tăng đều hằng năm.
+-	Sự phát triển của AI và IoT
+AI tích hợp vào mobile (nhận diện giọng nói, xử lý hình ảnh, gợi ý thông minh…) mở ra hàng loạt cơ hội mới. IoT cũng khiến ứng dụng di động trở thành trung tâm điều khiển thiết bị.
